@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnXemDiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xem điểm số" />
+
+    <Button
+        android:id="@+id/btnXemHanhKiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xem hạnh kiểm" />
+
+    <Button
+        android:id="@+id/btnXemHocPhi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xem học phí" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng xuất" />
+</LinearLayout>
