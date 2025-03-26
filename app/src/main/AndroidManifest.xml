@@ -8,6 +8,24 @@
         android:theme="@style/Theme.Demosll"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LienHePhuHuynh"
+            android:exported="false" />
+        <activity
+            android:name=".CapNhatDiem"
+            android:exported="false" />
+        <activity
+            android:name=".DanhSachHocSinh"
+            android:exported="false" />
+        <activity
+            android:name=".ThongTinHocSinh"
+            android:exported="false" />
+        <activity
+            android:name=".ThanhToanHocPhi"
+            android:exported="false" />
+        <activity
+            android:name=".KenhThongTin"
+            android:exported="false" />
+        <activity
             android:name=".HocSinhActivity"
             android:exported="false" />
         <activity
@@ -25,6 +43,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
