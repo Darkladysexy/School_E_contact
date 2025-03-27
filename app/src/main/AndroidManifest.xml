@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.demosll">
+    package="com.example.demosll" >
 
     <application
         android:allowBackup="true"
         android:label="DemoSLL"
         android:theme="@style/Theme.Demosll"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".khen_thuong_hoc_sinh"
+            android:exported="false" />
+        <activity
+            android:name=".hanh_kiem_hoc_sinh"
+            android:exported="false" />
+        <activity
+            android:name=".bang_diem_hoc_sinh"
+            android:exported="false" />
         <activity
             android:name=".LienHePhuHuynh"
             android:exported="false" />
@@ -33,7 +42,7 @@
             android:exported="false" /> <!-- Màn hình Đăng nhập là màn hình đầu tiên -->
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
