@@ -1,4 +1,4 @@
-package com.example.demosll;
+package com.example.demosll.model;
 
 public class ListItem {
     private int image;

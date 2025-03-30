@@ -1,4 +1,4 @@
-package com.example.demosll;
+package com.example.demosll.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,13 +7,17 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.demosll.model.ListItem;
+import com.example.demosll.R;
+
 import java.util.List;
 
-public class TeacherAdapter extends BaseAdapter {
+public class StudentAdapter extends BaseAdapter {
     Context context;
     List<ListItem> items;
 
-    public TeacherAdapter(Context context, List<ListItem> items) {
+    public StudentAdapter(Context context, List<ListItem> items) {
         this.context = context;
         this.items = items;
     }
@@ -36,7 +40,7 @@ public class TeacherAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.layout_item, parent, false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_hocsinh_1, parent, false);
         }
 
         ImageView imgIcon = convertView.findViewById(R.id.imgIcon);

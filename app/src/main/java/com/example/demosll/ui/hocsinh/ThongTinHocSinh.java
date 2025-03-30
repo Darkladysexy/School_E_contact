@@ -1,4 +1,4 @@
-package com.example.demosll;
+package com.example.demosll.ui.hocsinh;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,9 +9,10 @@ import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.example.demosll.model.ListItem;
+import com.example.demosll.R;
+import com.example.demosll.adapter.StudentAdapter;
 
 import java.util.ArrayList;
 
@@ -19,6 +20,7 @@ public class ThongTinHocSinh extends AppCompatActivity {
     ListView listViewTTHS;
     StudentAdapter adapter;
     ArrayList<ListItem> items;
+    String maHS;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,6 +28,9 @@ public class ThongTinHocSinh extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_thong_tin_hoc_sinh);
+
+        Intent intent = getIntent();
+        maHS = intent.getStringExtra("MaHS");
 
         Contructor();
         adapter = new StudentAdapter(this, items);
@@ -35,15 +40,18 @@ public class ThongTinHocSinh extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent myIntent;
                 if(position==0){
-                    myIntent=new Intent(ThongTinHocSinh.this,bang_diem_hoc_sinh.class);
+                    myIntent=new Intent(ThongTinHocSinh.this, BangDiemActivity.class);
+                    myIntent.putExtra("MaHS", maHS);
                     startActivity(myIntent);
                 }
                 if(position==1){
-                    myIntent=new Intent(ThongTinHocSinh.this, hanh_kiem_hoc_sinh.class);
+                    myIntent=new Intent(ThongTinHocSinh.this, HanhKiemActivity.class);
+                    myIntent.putExtra("MaHS", maHS);
                     startActivity(myIntent);
                 }
                 if(position==2){
-                    myIntent=new Intent(ThongTinHocSinh.this, khen_thuong_hoc_sinh.class);
+                    myIntent=new Intent(ThongTinHocSinh.this, KhenThuongActivity.class);
+                    myIntent.putExtra("MaHS", maHS);
                     startActivity(myIntent);
                 }
             }
