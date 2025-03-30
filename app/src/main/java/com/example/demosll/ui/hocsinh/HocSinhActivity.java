@@ -1,16 +1,17 @@
-package com.example.demosll;
+package com.example.demosll.ui.hocsinh;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.demosll.database.DatabaseHelper;
+import com.example.demosll.model.ListItem;
+import com.example.demosll.R;
+import com.example.demosll.adapter.StudentAdapter;
 
 import java.util.ArrayList;
 
@@ -18,11 +19,17 @@ public class HocSinhActivity extends AppCompatActivity {
     ListView lv;
     StudentAdapter adapter;
     ArrayList<ListItem> items;
+    String MaHS;
+    DatabaseHelper dbh = new DatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hoc_sinh);
         lv = findViewById(R.id.lv);
+
+        // Lấy mã học sinh đang đăng nhập
+        Intent intent = getIntent();
+        MaHS = intent.getStringExtra("MaHS");
 
         // Danh sách menu cho Học Sinh
         items = new ArrayList<>();
@@ -34,7 +41,8 @@ public class HocSinhActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent myIntent;
                 if(i==0){
-                    myIntent=new Intent(HocSinhActivity.this,ThongTinHocSinh.class);
+                    myIntent=new Intent(HocSinhActivity.this, ThongTinHocSinh.class);
+                    myIntent.putExtra("MaHS", MaHS);
                     startActivity(myIntent);
                 }
                 if(i==1){
@@ -42,7 +50,8 @@ public class HocSinhActivity extends AppCompatActivity {
                     startActivity(myIntent);
                 }
                 if(i==2){
-                    myIntent=new Intent(HocSinhActivity.this, ThanhToanHocPhi.class);
+                    myIntent=new Intent(HocSinhActivity.this, HocPhiActivity.class);
+                    myIntent.putExtra("MaHS", MaHS);
                     startActivity(myIntent);
                 }
             }

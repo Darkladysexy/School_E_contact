@@ -1,15 +1,16 @@
-package com.example.demosll;
+package com.example.demosll.ui.giaovien;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.demosll.model.ListItem;
+import com.example.demosll.R;
+import com.example.demosll.adapter.TeacherAdapter;
 
 import java.util.ArrayList;
 

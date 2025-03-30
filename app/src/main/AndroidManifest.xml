@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.demosll" >
+    package="com.example.demosll">
 
     <application
         android:allowBackup="true"
         android:label="DemoSLL"
         android:theme="@style/Theme.Demosll"
-        android:usesCleartextTraffic="true" >
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".khen_thuong_hoc_sinh"
+            android:name=".ui.hocsinh.HocPhiActivity"
             android:exported="false" />
         <activity
-            android:name=".hanh_kiem_hoc_sinh"
+            android:name=".model.HocPhi"
             android:exported="false" />
         <activity
-            android:name=".bang_diem_hoc_sinh"
+            android:name=".ui.hocsinh.KhenThuongActivity"
             android:exported="false" />
         <activity
-            android:name=".LienHePhuHuynh"
+            android:name=".ui.hocsinh.HanhKiemActivity"
             android:exported="false" />
         <activity
-            android:name=".CapNhatDiem"
+            android:name=".ui.hocsinh.BangDiemActivity"
             android:exported="false" />
         <activity
-            android:name=".DanhSachHocSinh"
+            android:name=".ui.giaovien.LienHePhuHuynh"
             android:exported="false" />
         <activity
-            android:name=".ThongTinHocSinh"
+            android:name=".ui.giaovien.CapNhatDiem"
             android:exported="false" />
         <activity
-            android:name=".ThanhToanHocPhi"
+            android:name=".ui.giaovien.DanhSachHocSinh"
             android:exported="false" />
         <activity
-            android:name=".KenhThongTin"
+            android:name=".ui.hocsinh.ThongTinHocSinh"
             android:exported="false" />
         <activity
-            android:name=".HocSinhActivity"
+            android:name=".ui.hocsinh.ThanhToanHocPhi"
             android:exported="false" />
         <activity
-            android:name=".GiaoVienActivity"
+            android:name=".ui.hocsinh.KenhThongTin"
+            android:exported="false" />
+        <activity
+            android:name=".ui.hocsinh.HocSinhActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.giaovien.GiaoVienActivity"
             android:exported="false" /> <!-- Màn hình Đăng nhập là màn hình đầu tiên -->
         <activity
-            android:name=".LoginActivity"
-            android:exported="true" >
+            android:name=".ui.login.LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,7 +56,7 @@
             </intent-filter>
         </activity> <!-- Màn hình chính -->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.login.MainActivity"
             android:exported="false" />
 
         <meta-data

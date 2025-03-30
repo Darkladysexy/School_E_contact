@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp">
+
+    <TextView
+        android:id="@+id/tvMonHoc"
+        android:layout_width="0dp"
+        android:layout_weight="1.2"
+        android:layout_height="wrap_content"
+        android:text="Môn học"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tvGK1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="GK1"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tvCK1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="CK1"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tvGK2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="GK2"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tvCK2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="CK2"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tvTBMon"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="TB"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"/>
+</LinearLayout>

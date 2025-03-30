@@ -1,4 +1,4 @@
-package com.example.demosll;
+package com.example.demosll.ui.hocsinh;
 
 import android.os.Bundle;
 
@@ -8,13 +8,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class hanh_kiem_hoc_sinh extends AppCompatActivity {
+import com.example.demosll.R;
+
+public class ThanhToanHocPhi extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_hanh_kiem_hoc_sinh);
+        setContentView(R.layout.activity_thanh_toan_hoc_phi);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

@@ -1,6 +1,5 @@
-package com.example.demosll;
+package com.example.demosll.database;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -61,11 +60,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Tạo bảng DiemSo
         String createDiemSo = "CREATE TABLE DiemSo (" +
                 "MaDS INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "HocKy TEXT, " +
                 "NamHoc TEXT, " +
                 "MonHoc TEXT, " +
-                "DiemGK REAL, " +
-                "DiemCK REAL, " +
+                "DiemGK1 REAL, " +
+                "DiemCK1 REAL, " +
+                "DiemGK2 REAL, " +
+                "DiemCK2 REAL, " +
                 "MaHS INTEGER, " +
                 "FOREIGN KEY (MaHS) REFERENCES HocSinh(MaHS))";
         db.execSQL(createDiemSo);
@@ -138,22 +138,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Thêm lớp học
         db.execSQL("INSERT INTO Lop (TenLop, MaGV, MaTruong) VALUES ('Lớp 10A1', 1, 1)");
 
-        // Thêm học sinh
+        // Thêm tài khoản
         db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
-                "('hocsinh@example.com', '123456', 'HS', 'Trần Văn B', '0912345678', '2025-03-25')");
+                "('hocsinh1@example.com', '123456', 'HS', 'Trần Văn A', '0912345678', '2025-03-25')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('hocsinh2@example.com', '123456', 'HS', 'Nguyễn Văn B', '0912342478', '2025-03-26')");
+
+        // Thêm học sinh
         db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
-                "('Trần Văn B', 'Nam', '2010-05-10', 1, NULL)");
+                "('Trần Văn C', 'Nam', '2010-05-10', 1, 2)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Nguyễn Thị D', 'Nữ', '2010-08-08', 1, 3)");
 
         // Thêm điểm số
-        db.execSQL("INSERT INTO DiemSo (HocKy, NamHoc, MonHoc, DiemGK, DiemCK, MaHS) VALUES " +
-                "('HK1', '2024-2025', 'Toán', 7.5, 8.0, 1)");
+        db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
+                "('2024-2025', 'Toán', 7.5, 8.0, 8.5, 8, 1)");
+        db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
+                "('2024-2025', 'Văn', 7.0, 7.5, 6.5, 7, 1)");
+        db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
+                "('2024-2025', 'Anh', 6.5, 7.0, 7.5, 8.5, 1)");
 
         // Thêm hạnh kiểm
         db.execSQL("INSERT INTO HanhKiem (MucHK, HocKy, NamHoc, MaHS) VALUES ('Tốt', 'HK1', '2024-2025', 1)");
 
         // Thêm học phí
-        db.execSQL("INSERT INTO HocPhi (TieuDe, SoTien, TrangThai, HanDong, NgayThanhToan, MaHS) VALUES " +
-                "('Học phí HK1', 2000000, 'Chưa đóng', '2025-04-30', NULL, 1)");
+        db.execSQL("INSERT INTO HocPhi (TieuDe, SoTien, TrangThai, HanDong, NgayThanhToan, MaHS) VALUES ('Học phí học kì 1', '2400000', 'Đã đóng', '31/12/2024', '20/12/2024', '1')");
+        db.execSQL("INSERT INTO HocPhi (TieuDe, SoTien, TrangThai, HanDong, NgayThanhToan, MaHS) VALUES ('Học phí học kì 2', '2556000', 'Chưa đóng', '31/5/2025', '', '1')");
+        db.execSQL("INSERT INTO HocPhi (TieuDe, SoTien, TrangThai, HanDong, NgayThanhToan, MaHS) VALUES ('Phí BHYT năm 2025', '824000', 'Chưa đóng', '31/5/2025', '', '1')");
+        db.execSQL("INSERT INTO HocPhi (TieuDe, SoTien, TrangThai, HanDong, NgayThanhToan, MaHS) VALUES ('Quần áo đồng phục, quần áo thể dục thể thao, phù hiệu', '572000', 'Chưa đóng', '31/5/2025', '', '1')");
 
         // Thêm hội thoại và tin nhắn
         db.execSQL("INSERT INTO HoiThoai (TenHT, NguoiTao, DSTV, NgayTao) VALUES ('Nhóm lớp 10A1', 1, '1,2', '2025-03-25')");
