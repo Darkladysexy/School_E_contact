@@ -8,6 +8,12 @@
         android:theme="@style/Theme.Demosll"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.giaovien.CapNhatDiemMonToan"
+            android:exported="false" />
+        <activity
+            android:name=".ui.giaovien.CapNhatDiemMonHoa"
+            android:exported="false" />
+        <activity
             android:name=".ui.hocsinh.HocPhiActivity"
             android:exported="false" />
         <activity
