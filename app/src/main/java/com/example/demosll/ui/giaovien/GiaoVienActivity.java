@@ -28,9 +28,9 @@ public class GiaoVienActivity extends AppCompatActivity {
 
         // Danh sách menu cho Giáo Viên
         items = new ArrayList<>();
-        items.add(new ListItem(R.drawable.group2s, "Danh sách học sinh"));
-        items.add(new ListItem(R.drawable.group2m, "Cập nhật điểm"));
-        items.add(new ListItem(R.drawable.group2n, "Liên hệ phụ huynh"));
+        items.add(new ListItem(R.drawable.gv1, "Danh sách học sinh"));
+        items.add(new ListItem(R.drawable.gv2, "Cập nhật điểm"));
+        items.add(new ListItem(R.drawable.gv3, "Liên hệ phụ huynh"));
 
         adapter = new TeacherAdapter(this, items);
         lv.setAdapter(adapter);
