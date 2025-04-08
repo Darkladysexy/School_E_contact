@@ -136,27 +136,83 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "('giaovien@example.com', '123456', 'GV', 'Nguyễn Văn A', '0987654321', '2025-03-25')");
 
         // Thêm lớp học
-        db.execSQL("INSERT INTO Lop (TenLop, MaGV, MaTruong) VALUES ('Lớp 10A1', 1, 1)");
+        db.execSQL("INSERT INTO Lop (TenLop, MaGV, MaTruong) VALUES ('Lớp 8A', 1, 1)");
 
         // Thêm tài khoản
         db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
-                "('hocsinh1@example.com', '123456', 'HS', 'Trần Văn A', '0912345678', '2025-03-25')");
+                "('phuhuynh1@example.com', '123456', 'HS', 'Trần Văn A', '0912345678', '2025-03-25')");
         db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
-                "('hocsinh2@example.com', '123456', 'HS', 'Nguyễn Văn B', '0912342478', '2025-03-26')");
+                "('phuhuynh2@example.com', '123456', 'HS', 'Nguyễn Văn B', '0912342478', '2025-03-26')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh3@example.com', '123456', 'HS', 'Lê Văn E', '0911111111', '2025-03-27')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh4@example.com', '123456', 'HS', 'Trần Thị F', '0911111112', '2025-03-27')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh5@example.com', '123456', 'HS', 'Nguyễn Văn G', '0911111113', '2025-03-27')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh6@example.com', '123456', 'HS', 'Phạm Thị H', '0911111114', '2025-03-27')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh7@example.com', '123456', 'HS', 'Đỗ Văn I', '0911111115', '2025-03-27')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh8@example.com', '123456', 'HS', 'Võ Thị K', '0911111116', '2025-03-27')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh9@example.com', '123456', 'HS', 'Ngô Văn L', '0911111117', '2025-03-27')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh10@example.com', '123456', 'HS', 'Lý Thị M', '0911111118', '2025-03-27')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh11@example.com', '123456', 'HS', 'Trương Văn N', '0911111119', '2025-03-27')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('phuhuynh12@example.com', '123456', 'HS', 'Bùi Thị O', '0911111120', '2025-03-27')");
 
         // Thêm học sinh
         db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
                 "('Trần Văn C', 'Nam', '2010-05-10', 1, 2)");
         db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
                 "('Nguyễn Thị D', 'Nữ', '2010-08-08', 1, 3)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Phạm Văn Q', 'Nam', '2010-04-01', 1, 4)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Lê Thị R', 'Nữ', '2010-09-15', 1, 5)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Trần Văn S', 'Nam', '2010-06-22', 1, 6)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Nguyễn Thị T', 'Nữ', '2010-12-10', 1, 7)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Đặng Văn U', 'Nam', '2010-03-30', 1, 8)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Vũ Thị V', 'Nữ', '2010-11-05', 1, 9)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Bùi Văn W', 'Nam', '2010-07-19', 1, 10)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Phan Thị X', 'Nữ', '2010-10-03', 1, 11)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Đoàn Văn Y', 'Nam', '2010-01-28', 1, 12)");
+        db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
+                "('Lý Thị Z', 'Nữ', '2010-02-14', 1, 13)");
+
 
         // Thêm điểm số
         db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
-                "('2024-2025', 'Toán', 7.5, 8.0, 8.5, 8, 1)");
+                "('2024-2025', 'Toán học', 7.5, 8.0, 8.5, 8, 1)");
         db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
-                "('2024-2025', 'Văn', 7.0, 7.5, 6.5, 7, 1)");
+                "('2024-2025', 'Ngữ văn', 7.0, 7.5, 6.5, 7, 1)");
         db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
-                "('2024-2025', 'Anh', 6.5, 7.0, 7.5, 8.5, 1)");
+                "('2024-2025', 'Tiếng anh', 6.5, 7.0, 7.5, 8.5, 1)");
+        db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
+                "('2024-2025', 'Sinh học', 6.8, 7.2, 7.0, 8.1, 1)");
+
+        db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
+                "('2024-2025', 'Lịch sử', 7.5, 6.9, 7.8, 8.0, 1)");
+
+        db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
+                "('2024-2025', 'Địa lý', 5.9, 6.3, 6.8, 7.4, 1)");
+
+        db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
+                "('2024-2025', 'Vật lý', 7.1, 7.6, 6.9, 8.2, 1)");
+
+        db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
+                "('2024-2025', 'Hóa học', 6.4, 6.8, 7.2, 8.0, 1)");
+
 
         // Thêm hạnh kiểm
         db.execSQL("INSERT INTO HanhKiem (MucHK, HocKy, NamHoc, MaHS) VALUES ('Tốt', 'HK1', '2024-2025', 1)");
@@ -168,7 +224,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO HocPhi (TieuDe, SoTien, TrangThai, HanDong, NgayThanhToan, MaHS) VALUES ('Quần áo đồng phục, quần áo thể dục thể thao, phù hiệu', '572000', 'Chưa đóng', '31/5/2025', '', '1')");
 
         // Thêm hội thoại và tin nhắn
-        db.execSQL("INSERT INTO HoiThoai (TenHT, NguoiTao, DSTV, NgayTao) VALUES ('Nhóm lớp 10A1', 1, '1,2', '2025-03-25')");
+        db.execSQL("INSERT INTO HoiThoai (TenHT, NguoiTao, DSTV, NgayTao) VALUES ('Nhóm lớp 8A', 1, '1,2', '2025-03-25')");
         db.execSQL("INSERT INTO TinNhan (NguoiGui, NoiDung, ThoiGianGui, MaHT) VALUES (1, 'Chào các em', '2025-03-25 10:00', 1)");
     }
 

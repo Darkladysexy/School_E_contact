@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.login.MainActivity">
+
+
+    <!-- Nút Trở lại -->
+
+    <!-- Chọn năm học -->
+
+
+    <!-- Bảng điểm -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_Menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="#0099FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_ThongBao"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bell"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/imageView_Profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circle"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/textView_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="12dp"
+            android:text="Thanh toán học phí"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_ThongBao"
+            app:layout_constraintStart_toEndOf="@+id/imageView_Profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Spinner
+        android:id="@+id/spinnerHocSinh"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_Menu" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="102dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        android:paddingEnd="8dp"
+        android:text="Chọn học sinh: "
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_Menu" />
+
+    <TextView
+        android:id="@+id/textViewNamHoc"
+        android:layout_width="84dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="34dp"
+        android:gravity="center_horizontal"
+        android:text="Năm học"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rvNhapDiem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/spinnerHocSinh"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_Menu"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNhapDiem"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="22dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerHocSinh" />
+
+    <Button
+        android:id="@+id/btnCapNhatDiem"
+        android:layout_width="111dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="24dp"
+        android:background="#0099FF"
+        android:text="Cập nhật"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvNhapDiem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

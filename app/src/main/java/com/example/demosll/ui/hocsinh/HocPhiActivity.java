@@ -90,9 +90,9 @@ public class HocPhiActivity extends AppCompatActivity {
                 do{
                     String tenPhi = cursor.getString(1);
                     String hanDong = cursor.getString(4);
-                    Double soTien = cursor.getDouble(2);
+                    double soTien = cursor.getDouble(2);
                     String trangThai = cursor.getString(3);
-                    hp0.add(new HocPhi(tenPhi, hanDong, soTien.toString(), trangThai));
+                    hp0.add(new HocPhi(tenPhi, hanDong, Double.toString(soTien), trangThai));
                     tongTien += soTien;
                 }while (cursor.moveToNext());
             }
