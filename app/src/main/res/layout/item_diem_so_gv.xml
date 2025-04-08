@@ -6,7 +6,7 @@
     android:layout_marginBottom="1dp">
 
     <TextView
-        android:id="@+id/tvMonHoc"
+        android:id="@+id/tvMonHoc_gv"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginRight="1dp"
@@ -20,7 +20,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/tvGK1"
+        android:id="@+id/tvGK1_gv"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginRight="1dp"
@@ -33,7 +33,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/tvCK1"
+        android:id="@+id/tvCK1_gv"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginRight="1dp"
@@ -46,7 +46,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/tvGK2"
+        android:id="@+id/tvGK2_gv"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginRight="1dp"
@@ -59,7 +59,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/tvCK2"
+        android:id="@+id/tvCK2_gv"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginRight="1dp"
@@ -72,7 +72,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/tvTBMon"
+        android:id="@+id/tvTBMon_gv"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_weight="1.2"

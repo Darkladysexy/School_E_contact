@@ -18,13 +18,14 @@ public class GiaoVienActivity extends AppCompatActivity {
     ListView lv;
     TeacherAdapter adapter;
     ArrayList<ListItem> items;
+    String MaGV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giao_vien);
 
-        lv = findViewById(R.id.lv);
+        initComponet();
 
         // Danh sách menu cho Giáo Viên
         items = new ArrayList<>();
@@ -40,17 +41,26 @@ public class GiaoVienActivity extends AppCompatActivity {
                 Intent myIntent;
                 if(i==0){
                     myIntent=new Intent(GiaoVienActivity.this, DanhSachHocSinh.class);
+                    myIntent.putExtra("MaGV", MaGV);
                     startActivity(myIntent);
                 }
                 if(i==1){
-                    myIntent=new Intent(GiaoVienActivity.this, CapNhatDiem.class);
+                    myIntent=new Intent(GiaoVienActivity.this, CapNhatDiemGiaoVien.class);
+                    myIntent.putExtra("MaGV", MaGV);
                     startActivity(myIntent);
                 }
                 if(i==2){
                     myIntent=new Intent(GiaoVienActivity.this, LienHePhuHuynh.class);
+                    myIntent.putExtra("MaGV", MaGV);
                     startActivity(myIntent);
                 }
             }
         });
+    }
+
+    private void initComponet() {
+        lv = findViewById(R.id.lv);
+        Intent intent = getIntent();
+        MaGV = intent.getStringExtra("MaGV");
     }
 }

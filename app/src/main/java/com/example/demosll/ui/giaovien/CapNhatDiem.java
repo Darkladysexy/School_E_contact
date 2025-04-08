@@ -69,11 +69,11 @@ public class CapNhatDiem extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent myintent;
                 if (i==0){
-                    myintent=new Intent(CapNhatDiem.this, CapNhatDiemMonToan.class);
+                    myintent=new Intent(CapNhatDiem.this, CapNhatDiemGiaoVien.class);
                     startActivity(myintent);
                 }
                 if (i==1){
-                    myintent=new Intent(CapNhatDiem.this, CapNhatDiemMonHoa.class);
+                    myintent=new Intent(CapNhatDiem.this, CapNhatDiemGiaoVien.class);
                     startActivity(myintent);
                 }
             }
