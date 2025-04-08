@@ -33,7 +33,7 @@
             android:textStyle="bold|italic" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageViewNotification"
             android:layout_width="40dp"
             android:layout_height="40dp"
             app:srcCompat="@drawable/bell" />
