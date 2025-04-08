@@ -216,6 +216,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Thêm hạnh kiểm
         db.execSQL("INSERT INTO HanhKiem (MucHK, HocKy, NamHoc, MaHS) VALUES ('Tốt', 'HK1', '2024-2025', 1)");
+        // Thêm thông báo
+        db.execSQL("INSERT INTO ThongBao (TieuDe, NoiDung, NgayDang, MaTruong) VALUES ('Đóng học phí tháng 4', 'Kế hoạc đóng học phí tháng 4 năm 2025 từ ngày 5-5-2025 đến ngày 10-5-2025', '1-4-2025',1)");
+        db.execSQL("INSERT INTO ThongBao (TieuDe, NoiDung, NgayDang, MaTruong) VALUES ('Chào mừng 30/4', 'Nhân dịp kỉ niệm 50 năm ngày giải phóng miền Nam thống nhất đất nước, nhà trường tổ chức văn nghệ chào mừng vào buổi sáng ngày 29-4-2025. Học sinh toàn trường được nghỉ từ ngày 30 đến hết ngày 2-5-2025.','10-4-2025',1)");
+
 
         // Thêm học phí
         db.execSQL("INSERT INTO HocPhi (TieuDe, SoTien, TrangThai, HanDong, NgayThanhToan, MaHS) VALUES ('Học phí học kì 1', '2400000', 'Đã đóng', '31/12/2024', '20/12/2024', '1')");
@@ -241,7 +245,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         boolean exists = (cursor.getCount() > 0);
         cursor.close();
         db.close();
-
         return exists;
     }
 
