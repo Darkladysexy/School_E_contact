@@ -11,7 +11,7 @@
             android:name=".ui.giaovien.CapNhatDiemMonToan"
             android:exported="false" />
         <activity
-            android:name=".ui.giaovien.CapNhatDiemMonHoa"
+            android:name=".ui.giaovien.CapNhatDiemGiaoVien"
             android:exported="false" />
         <activity
             android:name=".ui.hocsinh.HocPhiActivity"

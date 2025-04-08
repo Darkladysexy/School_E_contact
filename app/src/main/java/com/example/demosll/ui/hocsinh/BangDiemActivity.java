@@ -27,7 +27,7 @@ public class BangDiemActivity extends AppCompatActivity {
     private DatabaseHelper databaseHelper;
     private DiemAdapter diemAdapter;
     private String selectedNamHoc = "2024-2025"; // Mặc định
-    private String maHS; // Giả sử mã học sinh cố định
+    private String maHS;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -41,12 +41,9 @@ public class BangDiemActivity extends AppCompatActivity {
         // Ánh xạ các view
         spinnerNamHoc = findViewById(R.id.spinnerNamHoc);
         recyclerViewDiem = findViewById(R.id.recyclerViewDiem);
-
         // Danh sách năm học
         List<String> namHocList = new ArrayList<>();
-        namHocList.add("2023-2024");
         namHocList.add("2024-2025");
-        namHocList.add("2025-2026");
 
         // Lấy mã hs
         Intent intent = getIntent();
@@ -81,7 +78,7 @@ public class BangDiemActivity extends AppCompatActivity {
         SQLiteDatabase db = databaseHelper.getReadableDatabase();
 
         // Tạo tên cột
-        DiemSo diemSo1 = new DiemSo("Môn học", "Điểm GK1", "Điểm CK1", "Điểm GK2", "Điểm CK2", maHS);
+        DiemSo diemSo1 = new DiemSo("Môn học", "GK1", "CK1", "GK2", "CK2");
         diemSoList.add(diemSo1);
         // Truy vấn điểm số của học sinh theo năm học
         Cursor cursor = db.rawQuery(
@@ -98,7 +95,7 @@ public class BangDiemActivity extends AppCompatActivity {
             String diemGK2 = cursor.getString(3);
             String diemCK2 = cursor.getString(4);
 
-            DiemSo diemSo = new DiemSo(monHoc, diemGK1, diemCK1, diemGK2, diemCK2, maHS);
+            DiemSo diemSo = new DiemSo(monHoc, diemGK1, diemCK1, diemGK2, diemCK2);
 
             diemSoList.add(diemSo);
         }
