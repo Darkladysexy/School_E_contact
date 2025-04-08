@@ -1,13 +1,17 @@
 package com.example.demosll.ui.hocsinh;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.demosll.Notification;
+import com.example.demosll.ProfileHocSinh;
 import com.example.demosll.database.DatabaseHelper;
 import com.example.demosll.model.ListItem;
 import com.example.demosll.R;
@@ -18,14 +22,20 @@ import java.util.ArrayList;
 public class HocSinhActivity extends AppCompatActivity {
     ListView lv;
     StudentAdapter adapter;
+    ImageView imageViewProfile;
+    ImageView imageViewNotification;
     ArrayList<ListItem> items;
     String MaHS;
     DatabaseHelper dbh = new DatabaseHelper(this);
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_hoc_sinh);
         lv = findViewById(R.id.lv);
+        imageViewProfile = findViewById(R.id.imageView);
+        imageViewNotification = findViewById(R.id.imageViewNotification);
 
         // Lấy mã học sinh đang đăng nhập
         Intent intent = getIntent();
@@ -56,6 +66,27 @@ public class HocSinhActivity extends AppCompatActivity {
                 }
             }
         });
+
+        imageViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent;
+                myIntent = new Intent(HocSinhActivity.this, ProfileHocSinh.class);
+                myIntent.putExtra("MaHS",MaHS);
+                startActivity(myIntent);
+            }
+        });
+
+        imageViewNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent;
+                myIntent = new Intent(HocSinhActivity.this, Notification.class);
+                myIntent.putExtra("MaHS",MaHS);
+                startActivity(myIntent);
+            }
+        });
+
         adapter = new StudentAdapter(this, items);
         lv.setAdapter(adapter);
     }
