@@ -134,9 +134,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Thêm giáo viên
         db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
                 "('giaovien@example.com', '123456', 'GV', 'Nguyễn Văn A', '0987654321', '2025-03-25')");
+        db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
+                "('giaovien2@example.com', '123456', 'GV', 'Nguyễn Văn B', '0987654331', '2025-03-25')");
 
         // Thêm lớp học
         db.execSQL("INSERT INTO Lop (TenLop, MaGV, MaTruong) VALUES ('Lớp 10A1', 1, 1)");
+        db.execSQL("INSERT INTO Lop (TenLop, MaGV, MaTruong) VALUES ('Lớp 10A2', 2, 1)");
 
         // Thêm tài khoản
         db.execSQL("INSERT INTO TaiKhoan (Email, MatKhau, LoaiTK, HoTen, SDT, NgayTao) VALUES " +
@@ -146,9 +149,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Thêm học sinh
         db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
-                "('Trần Văn C', 'Nam', '2010-05-10', 1, 2)");
+                "('Trần Văn C', 'Nam', '2010-05-10', 2, 2)");
         db.execSQL("INSERT INTO HocSinh (HoTen, GioiTinh, NgaySinh, MaLop, MaPhuHuynh) VALUES " +
                 "('Nguyễn Thị D', 'Nữ', '2010-08-08', 1, 3)");
+
 
         // Thêm điểm số
         db.execSQL("INSERT INTO DiemSo (NamHoc, MonHoc, DiemGK1, DiemCK1, DiemGK2, DiemCK2, MaHS) VALUES " +
@@ -201,5 +205,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return null;
     }
+    public Cursor getAllHocSinh() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM HocSinh", null);
+    }
+    public Cursor getAllLop() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT TenLop FROM Lop", null);
+    }
+
+    public Cursor getHocSinhTheoLop(String tenLop) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT hs.HoTen, hs.GioiTinh, ph.SDT FROM HocSinh hs " +
+                "JOIN Lop l ON hs.MaLop = l.MaLop " +
+                "LEFT JOIN TaiKhoan ph ON hs.MaPhuHuynh = ph.MaTK " +
+                "WHERE l.TenLop = ?", new String[]{tenLop});
+    }
+
 
 }

@@ -1,20 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.giaovien.DanhSachHocSinh">
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#FF588A"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Danh sách học sinh"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/bell" />
+    </LinearLayout>
+
+    <!-- Spinner chọn lớp -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="8dp">
+
+        <Spinner
+            android:id="@+id/spinnerLop"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_spinner"
+            android:minWidth="100dp"
+            android:paddingHorizontal="8dp"
+            android:popupBackground="#FFFFFF"
+            android:gravity="center"
+            android:spinnerMode="dropdown"/>
+
+
+    </LinearLayout>
+
+    <!-- Danh sách học sinh -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:importantForAccessibility="no">
+
+
+    <LinearLayout
+            android:id="@+id/containerHocSinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+    </ScrollView>
+
+    <!-- Nút xem thêm -->
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvXemThem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Danh Sach Hoc Sinh "
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Xem thêm"
+        android:textColor="#FF4081"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:paddingBottom="12dp"
+        android:textStyle="italic" />
+</LinearLayout>

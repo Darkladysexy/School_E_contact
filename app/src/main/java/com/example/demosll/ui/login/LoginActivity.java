@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         // Kiểm tra nếu đã đăng nhập trước đó
         sharedPreferences = getSharedPreferences("USER_SESSION", Context.MODE_PRIVATE);
         if (sharedPreferences.getBoolean("LOGGED_IN", false)) {
+            dbHelper = new DatabaseHelper(this);
             String loaiTK = sharedPreferences.getString("LOAI_TK", "");
             dieuHuongTheoLoaiTK(loaiTK, email_login);
             finish();
