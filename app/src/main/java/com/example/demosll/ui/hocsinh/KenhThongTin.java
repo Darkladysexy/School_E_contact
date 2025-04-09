@@ -1,6 +1,10 @@
 package com.example.demosll.ui.hocsinh;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +13,17 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.demosll.R;
+import com.example.demosll.adapter.TeacherAdapter;
+import com.example.demosll.model.ListItem;
+import com.example.demosll.ui.hocsinh.TinNhan;
+
+import java.util.ArrayList;
 
 public class KenhThongTin extends AppCompatActivity {
-
+    ListView listMsg;
+    TeacherAdapter adapter;
+    ArrayList<ListItem> Items;
+    //    ArrayList<TeacherAdapter> teacherAdapters;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,5 +34,33 @@ public class KenhThongTin extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        listMsg = findViewById(R.id.listMsg);
+
+        Items = new ArrayList<>();
+        Items.add(new ListItem(R.drawable.profile,"Thầy Nguyễn Văn Hải \n Giáo Viên Chủ Nhiệm "));
+        Items.add(new ListItem(R.drawable.meeting,"Nhóm phụ huynh lớp 8A3"));
+
+        listMsg.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position==0){
+                    Intent intent = new Intent(KenhThongTin.this, TinNhan.class);
+                    intent.putExtra("Ten","Nguyễn Văn Hải");
+                    intent.putExtra("profile",R.drawable.profile);
+                    startActivity(intent);
+                }
+
+                if(position ==1) {
+                    Intent intent = new Intent(KenhThongTin.this,TinNhan.class);
+                    intent.putExtra("Ten","Nhóm lớp 8A");
+                    intent.putExtra("profile",R.drawable.meeting);
+                    startActivity(intent);
+
+                }
+            }
+        });
+        adapter = new TeacherAdapter(this,Items);
+        listMsg.setAdapter(adapter);
     }
 }
