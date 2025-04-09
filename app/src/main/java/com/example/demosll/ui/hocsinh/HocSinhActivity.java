@@ -10,8 +10,6 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.demosll.Notification;
-import com.example.demosll.ProfileHocSinh;
 import com.example.demosll.database.DatabaseHelper;
 import com.example.demosll.model.ListItem;
 import com.example.demosll.R;
@@ -34,7 +32,7 @@ public class HocSinhActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_hoc_sinh);
         lv = findViewById(R.id.lv);
-        imageViewProfile = findViewById(R.id.imageView);
+        imageViewProfile = findViewById(R.id.imageViewProfile);
         imageViewNotification = findViewById(R.id.imageViewNotification);
 
         // Lấy mã học sinh đang đăng nhập

@@ -1,4 +1,4 @@
-package com.example.demosll;
+package com.example.demosll.ui.hocsinh;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -13,12 +13,9 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
+import com.example.demosll.R;
 import com.example.demosll.database.DatabaseHelper;
-import com.example.demosll.ui.login.LoginActivity;
 import com.example.demosll.ui.login.MainActivity;
 
 public class ProfileHocSinh extends AppCompatActivity {

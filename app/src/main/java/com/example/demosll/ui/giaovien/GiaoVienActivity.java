@@ -36,7 +36,7 @@ public class GiaoVienActivity extends AppCompatActivity {
         items = new ArrayList<>();
         items.add(new ListItem(R.drawable.gv1, "Danh sách học sinh"));
         items.add(new ListItem(R.drawable.gv2, "Cập nhật điểm"));
-        items.add(new ListItem(R.drawable.gv3, "Liên hệ phụ huynh"));
+        items.add(new ListItem(R.drawable.gv3, "Kênh thông tin"));
 
         adapter = new TeacherAdapter(this, items);
         lv.setAdapter(adapter);

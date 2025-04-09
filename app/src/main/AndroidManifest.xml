@@ -11,16 +11,13 @@
             android:name=".ProfileGiaoVien"
             android:exported="false" />
         <activity
-            android:name=".DetailNotification"
+            android:name=".ui.hocsinh.DetailNotification"
             android:exported="false" />
         <activity
-            android:name=".Notification"
+            android:name=".ui.hocsinh.Notification"
             android:exported="false" />
         <activity
-            android:name=".ProfileHocSinh"
-            android:exported="false" />
-        <activity
-            android:name=".ui.giaovien.CapNhatDiemMonToan"
+            android:name=".ui.hocsinh.ProfileHocSinh"
             android:exported="false" />
         <activity
             android:name=".ui.giaovien.CapNhatDiemGiaoVien"
@@ -51,6 +48,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.hocsinh.ThongTinHocSinh"
+            android:exported="false" />
+        <activity
+            android:name=".ui.hocsinh.TinNhan"
             android:exported="false" />
         <activity
             android:name=".ui.hocsinh.ThanhToanHocPhi"

@@ -1,4 +1,4 @@
-package com.example.demosll;
+package com.example.demosll.ui.hocsinh;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,10 +11,8 @@ import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
+import com.example.demosll.R;
 import com.example.demosll.adapter.ThongBaoAdapter;
 import com.example.demosll.database.DatabaseHelper;
 import com.example.demosll.model.ThongBao;
@@ -57,7 +55,7 @@ public class Notification extends AppCompatActivity {
         lvThongBao.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(Notification.this,DetailNotification.class);
+                Intent intent = new Intent(Notification.this, DetailNotification.class);
                 String noiDung = thongBaos.get(position).NoiDung;
                 intent.putExtra("NoiDung",noiDung);
                 startActivity(intent);

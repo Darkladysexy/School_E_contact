@@ -16,7 +16,7 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageViewProfile"
             android:layout_width="40dp"
             android:layout_height="40dp"
             app:srcCompat="@drawable/circle" />
@@ -46,6 +46,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:divider="@android:color/transparent"
-        android:dividerHeight="20dp"
-        android:padding="16dp"/>
+        android:dividerHeight="80dp"
+        android:padding="16dp"
+        android:layout_marginTop="50dp"/>
 </LinearLayout>

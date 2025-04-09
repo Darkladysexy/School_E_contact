@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
-        android:background="#0099FF"
+        android:background="#FF588A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -50,7 +50,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/circle"
+            app:srcCompat="@drawable/icon"
             app:tint="@color/white" />
 
         <TextView
@@ -61,7 +61,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="75dp"
             android:layout_marginBottom="12dp"
-            android:text="Thanh toán học phí"
+            android:text="Cập nhật điểm học sinh"
             android:textColor="#FFF"
             android:textSize="20sp"
             android:textStyle="bold"

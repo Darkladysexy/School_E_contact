@@ -6,7 +6,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notification">
+    android:fitsSystemWindows="true"
+    tools:context=".ui.hocsinh.Notification">
 
   <LinearLayout
       android:id="@+id/linearLayout5"

@@ -16,7 +16,6 @@ import com.example.demosll.R;
 import com.example.demosll.adapter.TeacherAdapter;
 import com.example.demosll.model.ListItem;
 import com.example.demosll.ui.hocsinh.KenhThongTin;
-import com.example.demosll.ui.hocsinh.TinNhan;
 
 import java.util.ArrayList;
 
@@ -38,12 +37,12 @@ public class LienHePhuHuynh extends AppCompatActivity {
         listMsg = findViewById(R.id.listMsg);
 
         items = new ArrayList<ListItem>();
-        items.add(new ListItem(R.drawable.profile,"Học Sinh : Nguyễn Ngụy Như "));
-        items.add(new ListItem(R.drawable.profile,"Học Sinh :  Nguyễn Văn A"));
-        items.add(new ListItem(R.drawable.profile,"Học Sinh :  Nguyễn Văn B"));
-        items.add(new ListItem(R.drawable.profile,"Học Sinh :  Nguyễn Văn C"));
-        items.add(new ListItem(R.drawable.profile,"Học Sinh :  Nguyễn Văn D"));
-        items.add(new ListItem(R.drawable.profile,"Học Sinh :  Nguyễn Văn E"));
+        items.add(new ListItem(R.drawable.meeting,"Nhóm lớp 8A"));
+        items.add(new ListItem(R.drawable.profile,"Phụ Huynh :  Nguyễn Văn A"));
+        items.add(new ListItem(R.drawable.profile,"Phụ Huynh :  Nguyễn Văn B"));
+        items.add(new ListItem(R.drawable.profile,"Phụ Huynh :  Nguyễn Văn C"));
+        items.add(new ListItem(R.drawable.profile,"Phụ Huynh :  Nguyễn Văn D"));
+        items.add(new ListItem(R.drawable.profile,"Phụ Huynh :  Nguyễn Văn E"));
         adapter = new TeacherAdapter(this,items);
         listMsg.setAdapter(adapter);
 
