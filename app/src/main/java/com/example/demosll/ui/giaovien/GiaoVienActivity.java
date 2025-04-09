@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.demosll.ProfileGiaoVien;
+import com.example.demosll.ProfileHocSinh;
 import com.example.demosll.model.ListItem;
 import com.example.demosll.R;
 import com.example.demosll.adapter.TeacherAdapter;
@@ -19,6 +22,8 @@ public class GiaoVienActivity extends AppCompatActivity {
     TeacherAdapter adapter;
     ArrayList<ListItem> items;
     String MaGV;
+
+    ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +61,22 @@ public class GiaoVienActivity extends AppCompatActivity {
                 }
             }
         });
+
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GiaoVienActivity.this, ProfileGiaoVien.class);
+                intent.putExtra("MaGV",MaGV);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initComponet() {
         lv = findViewById(R.id.lv);
         Intent intent = getIntent();
         MaGV = intent.getStringExtra("MaGV");
+        img = findViewById(R.id.imgMenu);
     }
 }
