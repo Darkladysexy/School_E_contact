@@ -9,8 +9,7 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.demosll.ProfileGiaoVien;
-import com.example.demosll.ProfileHocSinh;
+import com.example.demosll.ui.hocsinh.ProfileHocSinh;
 import com.example.demosll.model.ListItem;
 import com.example.demosll.R;
 import com.example.demosll.adapter.TeacherAdapter;

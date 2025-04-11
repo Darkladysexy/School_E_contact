@@ -8,7 +8,7 @@
         android:theme="@style/Theme.Demosll"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ProfileGiaoVien"
+            android:name=".ui.giaovien.ProfileGiaoVien"
             android:exported="false" />
         <activity
             android:name=".ui.hocsinh.DetailNotification"
